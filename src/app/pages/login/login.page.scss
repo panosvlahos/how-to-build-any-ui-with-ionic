@@ -1,0 +1,32 @@
+ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .error-message-container {
+    margin-top: 10px;
+    background-color: #ffcccc;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;  /* Limits width on larger screens */
+    position: absolute;
+    bottom: 10%;
+  }
+  
+  .error-message {
+    display: flex;
+    align-items: center;
+    color: #ff0000;
+    justify-content: center;
+  }
+  
+  .error-message ion-icon {
+    margin-right: 8px;
+  }
+  

@@ -1,3 +1,47 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <!-- Side menu -->
+  <ion-menu side="start" menuId="first" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+        
+        <ion-buttons slot="end">
+          <ion-button (click)="openSettings()">Settings</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink="/tab1" routerDirection="root" (click)="closeMenu()">
+          <ion-label>Tab 1</ion-label>
+        </ion-item>
+        <ion-item routerLink="/tab2" routerDirection="root" (click)="closeMenu()">
+          <ion-label>Tab 2</ion-label>
+        </ion-item>
+        <ion-item routerLink="/tab3" routerDirection="root" (click)="closeMenu()">
+          <ion-label>Tab 3</ion-label>
+        </ion-item>
+        <ion-item routerLink="/tab4" routerDirection="root" (click)="closeMenu()">
+          <ion-label>Tab 4</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Main Content -->
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+
+  <!-- Menu Button in the Main Toolbar -->
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Main App</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-toggle menu="first">
+          <ion-button>
+            <ion-icon slot="icon-only" name="menu"></ion-icon>
+          </ion-button>
+        </ion-menu-toggle>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
 </ion-app>

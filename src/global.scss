@@ -24,3 +24,8 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+html, body {
+    padding-top: 20px;  /* Adjust as needed */
+    background-color: #f8f8f8;  /* Simulate status bar background color */
+  }

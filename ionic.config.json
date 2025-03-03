@@ -1,5 +1,7 @@
 {
   "name": "custom-components",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
