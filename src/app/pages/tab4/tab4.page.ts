@@ -51,7 +51,7 @@ export class Tab4Page {
   }
 
   // Getter method to return the interests as FormArray
-  get interests() {
+  get interests(): FormArray {
     return this.exampleForm.get('interests') as FormArray;
   }
 

@@ -19,6 +19,10 @@
       
 
       <ion-button expand="full" (click)="login()">Login</ion-button>
+      <ion-item lines="none">
+        <ion-label>Don't have an account?</ion-label>
+        <ion-button fill="clear" routerLink="/create-user">Create User</ion-button>
+      </ion-item>
     </ion-card-content>
   
   <div *ngIf="submitError" class="error-message-container">

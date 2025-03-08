@@ -21,11 +21,12 @@
 
     <form [formGroup]="exampleForm" (ngSubmit)="onSubmit()">
       <ion-row class="interest-options">
-        <ion-col size="6" formArrayName="interests" *ngFor="let interest of interests.controls; let i=index;">
+        <ion-col size="6"  *ngFor="let interest of interestsList; let i=index;">
           <app-custom-checkbox class="custom-checkbox">
-            <div class="checkbox-content" [style.--img-src]="interestsList[i].image">
-              <ion-label class="checkbox-title">{{interestsList[i].name}}</ion-label>
-              <ion-checkbox class="checkbox-item" [formControl]="interest"></ion-checkbox>
+            <div class="checkbox-content" [style.--img-src]="interest.image">
+              <ion-label class="checkbox-title">{{interest.name}}</ion-label>
+              <ion-checkbox class="checkbox-item" [formControl]="interests.at(i)"></ion-checkbox>
+
             </div>
           </app-custom-checkbox>
         </ion-col>

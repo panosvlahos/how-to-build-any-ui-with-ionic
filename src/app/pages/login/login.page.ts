@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service'; // Import AuthService
 
 @Component({
   selector: 'app-login',
@@ -11,11 +12,11 @@ export class LoginPage {
   password: string = '';
   submitError: string = '';  // Variable to hold the error message
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   login() {
-    // Temporary login validation
-    if (this.email === 'admin' && this.password === '12') {
+    // Use AuthService to handle login
+    if (this.authService.login(this.email, this.password)) {
       this.submitError = ''; // Clear any previous errors
       this.router.navigate(['/tab1']); // Redirect after login
     } else {

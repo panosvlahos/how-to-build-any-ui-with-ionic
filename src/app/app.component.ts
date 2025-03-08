@@ -37,5 +37,10 @@ export class AppComponent {
     if (!isLoggedIn) {
       this.router.navigate(['/login']);
     }
+    
+  }
+  openSettings() {
+    // Your logic to open the settings goes here
+    console.log("Settings button clicked!");
   }
 }
